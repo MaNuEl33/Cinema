@@ -26,3 +26,9 @@ Route::get('nombre/{nombre}', function($nombre) {
 Route::get('edad/{edad?}', function($edad = 0) {
   return "Mi edad es: " . $edad;
 });
+
+Route::get('controlador', 'PruebaController@index');
+
+Route::get('name/{nombre}', 'PruebaController@name');
+
+Route::resource('movie', 'MovieController');
