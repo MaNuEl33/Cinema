@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('prueba', function() {
+  return "Hola desde routes/web.php";
+});
+
+Route::get('nombre/{nombre}', function($nombre) {
+  return "Mi nombres es: " . $nombre;
+});
+
+Route::get('edad/{edad?}', function($edad = 0) {
+  return "Mi edad es: " . $edad;
+});
