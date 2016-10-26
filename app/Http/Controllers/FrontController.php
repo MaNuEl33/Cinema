@@ -20,4 +20,8 @@ class FrontController extends Controller
     return view('reviews');
   }
 
+  function admin() {
+    return view('admin.index');
+  }
+
 }
