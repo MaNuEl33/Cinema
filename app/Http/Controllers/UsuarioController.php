@@ -47,7 +47,8 @@ class UsuarioController extends Controller
           'password' => $request['password'],
         ]);
 
-        return redirect('/usuario')->with('message', 'store');
+        Session::flash('message', 'Usuario creado correctamente');
+        return Redirect::to('/usuario');
     }
 
     /**
