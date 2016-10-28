@@ -8,6 +8,11 @@ use Cinema\Http\Requests;
 
 class FrontController extends Controller
 {
+
+  public function __construct() {
+    $this->middleware('auth', ['only' => 'admin']);
+  }
+
   function index() {
     return view('index');
   }
